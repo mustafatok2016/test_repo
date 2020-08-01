@@ -3,8 +3,10 @@
 a=10
 b=5
 
+#comment
 if [a ==b]
 
- then 
+then 
      echo "equals"
+fi
 
