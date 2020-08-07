@@ -1,0 +1,13 @@
+---
+- name: wordpress installation
+  hosts: localhost
+  tasks:
+  - name: Route 53
+    route53:
+      state: present
+      zone: tokmustafa.com
+      record: wordpress.tokmustafa.com
+      type: A
+      ttl: 60
+      value: 3.128.28.102
+      wait: yes
