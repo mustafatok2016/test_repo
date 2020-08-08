@@ -5,5 +5,8 @@
   become_method: sudo
   user: centos
   tasks:
-  - name: Run find command
+  - name: Files over 90 days old
     shell: 'find   /var/log     -type f      -name "*.log"     -mtime   +90    -exec   gzip -v9   {} +'
+
+  - name: Files over 100m over
+  shell: 'find   /var/log     -type f      -name "*.log"     -size   +100M    -exec   gzip -v9   {} +'
